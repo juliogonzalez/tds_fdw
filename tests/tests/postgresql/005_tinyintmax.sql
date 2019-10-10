@@ -1,7 +1,7 @@
 DROP FOREIGN TABLE IF EXISTS @PSCHEMANAME.tinyint_max;
 
 CREATE FOREIGN TABLE @PSCHEMANAME.tinyint_max (
-        id int,
+        id inta,
         value smallint
 )
         SERVER mssql_svr
