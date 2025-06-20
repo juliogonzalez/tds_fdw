@@ -2051,7 +2051,7 @@ appendOrderByClause(StringInfo buf, PlannerInfo *root, RelOptInfo *baserel,
 
 		appendStringInfoString(buf, delim);
 		deparseExpr(em_expr, &context);
-		if (pathkey->pk_strategy == BTLessStrategyNumber)
+		if (pathkey->pk_cmptype == BTLessStrategyNumber)
 			appendStringInfoString(buf, " ASC");
 		else
 			appendStringInfoString(buf, " DESC");

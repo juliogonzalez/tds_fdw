@@ -2619,7 +2619,7 @@ void tdsGetForeignPaths(PlannerInfo *root, RelOptInfo *baserel, Oid foreigntable
 								   NIL);		/* no fdw_private list */
 #else
 	path = create_foreignscan_path(root, baserel, NULL,
-								   fpinfo->rows,
+								   fpinfo->rows,0,
 								   fpinfo->startup_cost,
 								   fpinfo->total_cost,
 								   NIL, /* no pathkeys */
@@ -2706,7 +2706,7 @@ void tdsGetForeignPaths(PlannerInfo *root, RelOptInfo *baserel, Oid foreigntable
 #else
 				 create_foreignscan_path(root, baserel,
 										 NULL,
-										 rows,
+										 rows,0,
 										 startup_cost,
 										 total_cost,
 										 usable_pathkeys,
@@ -2908,7 +2908,7 @@ void tdsGetForeignPaths(PlannerInfo *root, RelOptInfo *baserel, Oid foreigntable
 #else
 		path = create_foreignscan_path(root, baserel,
 									   NULL,
-									   rows,
+									   rows,0,
 									   startup_cost,
 									   total_cost,
 									   NIL,		/* no pathkeys */

@@ -25,6 +25,8 @@
 #include "postgres.h"
 #include "funcapi.h"
 #include "commands/explain.h"
+#include "commands/explain_state.h"
+#include "commands/explain_format.h"
 #include "foreign/fdwapi.h"
 #include "foreign/foreign.h"
 
